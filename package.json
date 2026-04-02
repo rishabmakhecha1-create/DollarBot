@@ -1,0 +1,17 @@
+{
+  "name": "dollarbot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "wrangler pages dev public --ai AI",
+    "dev": "wrangler pages dev public --ai AI",
+    "deploy": "wrangler pages deploy public"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

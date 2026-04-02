@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DollarBot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">
+            <img src="./assets/db_logo.png" alt="DollarBot logo" class="brand-logo" />
+          </div>
+          <div>
+            <p class="eyebrow">Youth Money Coach</p>
+            <h1>DollarBot</h1>
+          </div>
+        </div>
+
+        <p class="sidebar-copy">
+          Basic but vital financial guidance for teens and young adults. Clear,
+          calm, and made for real-life money decisions.
+        </p>
+
+        <nav class="nav-panel" aria-label="DollarBot sections">
+          <button class="nav-button active" type="button" data-page="home">
+            <span class="nav-label">Home</span>
+            <span class="nav-copy">Big-picture intro and your fastest way in.</span>
+          </button>
+          <button class="nav-button" type="button" data-page="chat">
+            <span class="nav-label">Chat</span>
+            <span class="nav-copy">Talk to DollarBot and use the guided prompt deck.</span>
+          </button>
+          <button class="nav-button" type="button" data-page="tools">
+            <span class="nav-label">Premium Tools</span>
+            <span class="nav-copy">Build a custom budget or paycheck plan with categories.</span>
+          </button>
+          <button class="nav-button" type="button" data-page="troubleshooting">
+            <span class="nav-label">Troubleshooting</span>
+            <span class="nav-copy">Check live AI status and fix beta issues fast.</span>
+          </button>
+        </nav>
+
+        <section class="sidebar-note">
+          <p class="panel-label">Boundaries</p>
+          <p class="panel-copy">
+            Educational guidance only. Not a substitute for a licensed
+            financial advisor, tax professional, or attorney.
+          </p>
+        </section>
+      </aside>
+
+      <main class="app-card">
+        <section id="page-home" class="page active" data-page="home">
+          <div class="home-hero">
+            <p class="eyebrow">Financial Basics For Real Life</p>
+            <div class="home-badge-row">
+              <h2>Money clarity for the moments that actually matter.</h2>
+              <div class="hero-badge">Built for ages 14-24</div>
+            </div>
+            <p class="home-blurb">
+              DollarBot helps you make sense of budgets, credit, saving,
+              paychecks, student money choices, and scams without drowning you
+              in jargon. It is designed to feel sharp, calm, and useful when you
+              need a quick answer or a better plan.
+            </p>
+            <div class="home-actions">
+              <button id="getStartedButton" type="button" class="primary-action">
+                Get Started
+              </button>
+              <button id="openToolsButton" type="button" class="secondary-action">
+                Explore Premium Tools
+              </button>
+            </div>
+          </div>
+
+          <section class="home-showcase">
+            <article class="showcase-card showcase-featured">
+              <p class="panel-label">Why It Hits Different</p>
+              <h3>Ask a real question. Get a clean answer.</h3>
+              <p>
+                No spreadsheet energy. No confusing lecture voice. Just direct,
+                practical money coaching that meets you where you are.
+              </p>
+            </article>
+
+            <article class="showcase-card">
+              <p class="panel-label">Most Useful For</p>
+              <ul class="showcase-list">
+                <li>First budgets</li>
+                <li>Debit vs credit</li>
+                <li>Paychecks and taxes</li>
+                <li>Student money choices</li>
+                <li>Scam avoidance</li>
+              </ul>
+            </article>
+
+            <article class="showcase-card">
+              <p class="panel-label">Inside The Beta</p>
+              <p>
+                Live AI chat, a personalized budget planner, a smarter paycheck
+                estimator, and a troubleshooting page if Cloudflare AI ever has
+                a moment.
+              </p>
+            </article>
+          </section>
+        </section>
+
+        <section id="page-chat" class="page" data-page="chat">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Live Coach</p>
+              <h2>Ask DollarBot right now.</h2>
+            </div>
+            <div class="hero-badge">Live AI Chat</div>
+          </div>
+
+          <div class="chat-page-layout">
+            <section class="chat-rail">
+              <div class="chat-rail-card">
+                <p class="panel-label">Starter Prompts</p>
+                <div class="starter-grid starter-grid-chat" aria-label="Starter prompts">
+                  <button class="starter" data-prompt="How do I make my first budget if I only make $300 a month?">
+                    Build my first budget
+                  </button>
+                  <button class="starter" data-prompt="Should I get a debit card or a credit card first?">
+                    Debit or credit first?
+                  </button>
+                  <button class="starter" data-prompt="My paycheck looks smaller than expected. Where did the money go?">
+                    Explain my paycheck
+                  </button>
+                  <button class="starter" data-prompt="How do I save for an emergency fund when I barely have extra money?">
+                    Start an emergency fund
+                  </button>
+                </div>
+              </div>
+
+              <div class="chat-rail-card">
+                <p class="panel-label">Quick Lessons</p>
+                <div class="lesson-strip lesson-strip-chat" aria-label="Money lessons">
+                  <button class="lesson-card" data-prompt="Teach me the basics of budgeting like I'm 16.">
+                    <span class="lesson-kicker">Starter lesson</span>
+                    <strong>Budgeting 101</strong>
+                    <span>Learn the core money buckets in plain English.</span>
+                  </button>
+                  <button class="lesson-card" data-prompt="Teach me how credit cards work for beginners and what mistakes to avoid.">
+                    <span class="lesson-kicker">Starter lesson</span>
+                    <strong>Credit Basics</strong>
+                    <span>Understand credit without getting trapped by fees.</span>
+                  </button>
+                  <button class="lesson-card" data-prompt="Teach me how to read a paycheck and what taxes and deductions mean.">
+                    <span class="lesson-kicker">Starter lesson</span>
+                    <strong>Paycheck Breakdown</strong>
+                    <span>Make sense of gross pay, net pay, and deductions.</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="chat-panel chat-page-panel">
+              <div class="chat-toolbar">
+                <div>
+                  <p class="panel-label">Conversation</p>
+                  <p class="chat-hint">Ask a question, tap a prompt, or clear the thread to start fresh.</p>
+                </div>
+                <button id="clearChatButton" type="button" class="toolbar-button">Clear Chat</button>
+              </div>
+              <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+              <form id="chatForm" class="composer">
+                <label class="sr-only" for="userInput">Message DollarBot</label>
+                <textarea
+                  id="userInput"
+                  name="message"
+                  rows="1"
+                  placeholder="Ask about budgeting, saving, credit, jobs, taxes, loans, or scams..."
+                ></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <section id="page-tools" class="page" data-page="tools">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Premium Tools</p>
+              <h2>Interactive calculators with your categories built in.</h2>
+            </div>
+            <div class="hero-badge">Premium Preview</div>
+          </div>
+
+          <div class="tool-switcher" role="tablist" aria-label="Premium tools">
+            <button
+              id="budgetToolButton"
+              class="tool-switch active"
+              type="button"
+              data-tool="budget"
+              aria-selected="true"
+            >
+              Budget Planner
+            </button>
+            <button
+              id="paycheckToolButton"
+              class="tool-switch"
+              type="button"
+              data-tool="paycheck"
+              aria-selected="false"
+            >
+              Paycheck Estimator
+            </button>
+          </div>
+
+          <section id="toolWorkspace" class="premium-panel tools-panel">
+            <div class="tool-workspace-header">
+              <div>
+                <p id="toolEyebrow" class="panel-label">Premium Tool</p>
+                <h3 id="toolTitle">Budget Planner</h3>
+                <p id="toolDescription" class="config-text">Use one monthly income number to build a beginner-friendly spending plan.</p>
+              </div>
+            </div>
+
+            <form id="budgetForm" class="tool-form">
+              <div class="form-grid">
+                <label>
+                  Monthly income
+                  <input id="budgetIncome" type="number" min="0" step="0.01" placeholder="1200" />
+                </label>
+                <label>
+                  Needs %
+                  <input id="budgetNeeds" type="number" min="0" max="100" step="1" value="50" />
+                </label>
+                <label>
+                  Wants %
+                  <input id="budgetWants" type="number" min="0" max="100" step="1" value="30" />
+                </label>
+                <label>
+                  Savings %
+                  <input id="budgetSavings" type="number" min="0" max="100" step="1" value="20" />
+                </label>
+              </div>
+
+              <section class="category-builder" aria-label="Budget categories">
+                <div class="category-builder-header">
+                  <p class="panel-label">Personalize This Plan</p>
+                  <p class="config-text">Add the categories that matter most for this budget.</p>
+                </div>
+
+                <div class="category-suggestions">
+                  <button type="button" class="category-pill" data-target="budget" data-value="School">School</button>
+                  <button type="button" class="category-pill" data-target="budget" data-value="Transportation">Transportation</button>
+                  <button type="button" class="category-pill" data-target="budget" data-value="Food">Food</button>
+                  <button type="button" class="category-pill" data-target="budget" data-value="Subscriptions">Subscriptions</button>
+                  <button type="button" class="category-pill" data-target="budget" data-value="Emergency Fund">Emergency Fund</button>
+                </div>
+
+                <div class="category-input-row">
+                  <input id="budgetCategoryInput" type="text" placeholder="Add your own category" />
+                  <button id="addBudgetCategoryButton" type="button" class="toolbar-button">Add</button>
+                </div>
+
+                <div id="budgetCategoryList" class="category-list" aria-live="polite"></div>
+              </section>
+
+              <button type="submit" class="tool-submit">Build Budget Plan</button>
+            </form>
+
+            <form id="paycheckForm" class="tool-form hidden">
+              <div class="form-grid">
+                <label>
+                  Hourly rate
+                  <input id="payRate" type="number" min="0" step="0.01" placeholder="15" />
+                </label>
+                <label>
+                  Hours worked
+                  <input id="hoursWorked" type="number" min="0" step="0.1" placeholder="20" />
+                </label>
+                <label>
+                  Federal withholding %
+                  <input id="federalTax" type="number" min="0" max="100" step="0.1" value="10" />
+                </label>
+                <label>
+                  State withholding %
+                  <input id="stateTax" type="number" min="0" max="100" step="0.1" value="4" />
+                </label>
+              </div>
+
+              <section class="category-builder" aria-label="Paycheck categories">
+                <div class="category-builder-header">
+                  <p class="panel-label">Personalize This Paycheck</p>
+                  <p class="config-text">Add the categories shaping how you want to use this money.</p>
+                </div>
+
+                <div class="category-suggestions">
+                  <button type="button" class="category-pill" data-target="paycheck" data-value="Part-time Job">Part-time Job</button>
+                  <button type="button" class="category-pill" data-target="paycheck" data-value="Tips">Tips</button>
+                  <button type="button" class="category-pill" data-target="paycheck" data-value="Saving for School">Saving for School</button>
+                  <button type="button" class="category-pill" data-target="paycheck" data-value="Helping Family">Helping Family</button>
+                  <button type="button" class="category-pill" data-target="paycheck" data-value="Weekend Spending">Weekend Spending</button>
+                </div>
+
+                <div class="category-input-row">
+                  <input id="paycheckCategoryInput" type="text" placeholder="Add your own category" />
+                  <button id="addPaycheckCategoryButton" type="button" class="toolbar-button">Add</button>
+                </div>
+
+                <div id="paycheckCategoryList" class="category-list" aria-live="polite"></div>
+              </section>
+
+              <button type="submit" class="tool-submit">Estimate Take-Home Pay</button>
+            </form>
+
+            <div id="toolResult" class="tool-result hidden" aria-live="polite"></div>
+          </section>
+        </section>
+
+        <section id="page-troubleshooting" class="page" data-page="troubleshooting">
+          <div class="page-header">
+            <div>
+              <p class="eyebrow">Troubleshooting</p>
+              <h2>Check live AI status and fix beta issues fast.</h2>
+            </div>
+            <button id="refreshStatusButton" type="button" class="toolbar-button">Refresh Status</button>
+          </div>
+
+          <div class="troubleshooting-grid">
+            <section class="status-card">
+              <p class="panel-label">Live AI Status</p>
+              <p id="apiStatus" class="status-readout">Checking whether Cloudflare live AI is available...</p>
+            </section>
+
+            <section class="status-card">
+              <p class="panel-label">What To Check</p>
+              <ul class="showcase-list">
+                <li>Cloudflare Pages deployed the latest GitHub version</li>
+                <li>The `AI` Workers AI binding exists in project settings</li>
+                <li>`/api/health` returns JSON instead of HTML</li>
+                <li>Your browser is hard refreshed after a new deploy</li>
+              </ul>
+            </section>
+
+            <section class="status-card status-card-wide">
+              <p class="panel-label">Fallback Behavior</p>
+              <p>
+                If live AI has a temporary issue, DollarBot keeps working in built-in
+                guidance mode so the beta does not go dark. That means the app can
+                still answer basics and the premium tools still work.
+              </p>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
